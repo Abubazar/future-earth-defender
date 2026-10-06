@@ -17,8 +17,39 @@
     canvas {
       background-color: black;
     }
+
+    #dialog {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(70, 69, 69);
+      z-index: 200;
+      font: 30px Arial;
+      text-align: center;
+      color: white;
+      padding: 20px 70px;
+      border-radius: 20px;
+      border: 3px solid rgb(168, 168, 168);
+    }
+    button {
+      font: 30px Arial;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: rgb(128, 126, 126);
+      color: white;
+    }
   </style>
   <body>
     <canvas id="space"></canvas>
+    <div id="dialog">
+      <h2 id="dialogText">Future Earth Defender</h2>
+      <p id="scoreLabel">
+        You are Earth's LAST defender against the asteroids heading towards it.
+        use arrows to rotate round the earth and Space bar to shoot. Destroy as
+        many asteroids as possible. We're counting on you!
+      </p>
+      <button id="dButton" onclick="startGame()">Play</button>
+    </div>
   </body>
 </html>
